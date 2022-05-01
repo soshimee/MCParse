@@ -36,7 +36,7 @@ function mcParse(object) {
 		const span = document.createElement("span");
 
 		span.innerText = object.text;
-		if (object.color) span.style.color = colors[object.color];
+		if (object.color) span.style.color = colors[object.color] ? colors[object.color] : object.color;
 		if (object.bold) span.style.fontWeight += " bold";
 		if (object.italic) span.style.fontStyle += " italic";
 		if (object.underlined) span.style.textDecorationLine += " underline";
